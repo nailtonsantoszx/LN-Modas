@@ -1,45 +1,86 @@
+/* Estilos Globais */
 body {
-    background-color: black;
-    color: white;
+    background-color: #f4f4f4;
+    color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
 header {
-    margin-bottom: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
 }
 
-h1 {
-    font-size: 2.5em;
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Seção Principal */
+main {
+    padding: 20px 0;
+}
+
+/* Carrossel de Produtos */
 .carousel {
     position: relative;
-    width: 80%;
-    max-width: 800px;
-    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease;
+    overflow: hidden;
 }
 
 .carousel-item {
-    min-width: 100%;
+    min-width: 25%;
     box-sizing: border-box;
     text-align: center;
+    padding: 10px;
 }
 
 .carousel-item img {
     width: 100%;
     border-radius: 10px;
+}
+
+.carousel-item p {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.carousel-item span {
+    color: #d9534f;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .carousel-button {
@@ -59,4 +100,65 @@ h1 {
 
 .next {
     right: 10px;
+}
+
+/* Seção de Promoções */
+.promotions {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.promotions h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.promotion-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.promotion-item img {
+    width: 40%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.promotion-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.promotion-info p {
+    margin: 5px 0 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
 }

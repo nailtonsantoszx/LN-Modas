@@ -15,10 +15,14 @@ header {
     margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 2.5em;
+}
+
 .carousel {
     position: relative;
     width: 80%;
-    max-width: 600px;
+    max-width: 800px;
     overflow: hidden;
 }
 
@@ -35,23 +39,24 @@ header {
 
 .carousel-item img {
     width: 100%;
-    height: auto;
+    border-radius: 10px;
 }
 
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    padding: 10px;
+    color: white;
+    font-size: 2em;
     cursor: pointer;
 }
 
 .prev {
-    left: 0;
+    left: 10px;
 }
 
 .next {
-    right: 0;
+    right: 10px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,20 @@
 <body>
     <header>
         <h1>Loja de Roupas</h1>
-        <button id="admin-toggle" onclick="toggleAdmin()">Admin Mode</button>
+        <button id="admin-button" onclick="toggleAdmin()">Administração</button>
     </header>
+
     <main>
         <section id="carousel">
-            <div class="product">
-                <img src="img1.jpg" alt="Produto 1">
-                <button class="remove-image">Remover Imagem</button>
-            </div>
-            <div class="product">
-                <img src="img2.jpg" alt="Produto 2">
-                <button class="remove-image">Remover Imagem</button>
-            </div>
-            <!-- Adicione mais produtos aqui -->
+            <!-- Imagens dos produtos serão adicionadas aqui -->
         </section>
-        <button id="add-image" onclick="addImage()">Adicionar Imagem</button>
+
+        <div id="admin-panel" class="hidden">
+            <input type="file" id="upload-image" accept="image/*" onchange="addImage(event)">
+            <button id="remove-image-btn" class="hidden" onclick="removeImage()">Remover Imagem</button>
+        </div>
     </main>
+
     <script src="admin.js"></script>
 </body>
 </html>

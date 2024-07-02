@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $senha = $_POST['senha'];
 
     // Verifique se o e-mail e a senha correspondem ao admin
-    if ($email === 'seu-email@exemplo.com' && $senha === 'sua-senha-segura') {
+    if ($email === 'nailtonramos23@gmail.com' && $senha === 'kenaizin777') {
         $_SESSION['admin'] = true;
         header('Location: index.php');
         exit;

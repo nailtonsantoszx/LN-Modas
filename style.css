@@ -1,7 +1,7 @@
 /* Estilos Globais */
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -15,20 +15,21 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #333;
+    background-color: #111;
     color: white;
     padding: 15px 0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0;
     display: flex;
     justify-content: center;
 }
@@ -47,21 +48,29 @@ main {
     padding: 20px 0;
 }
 
-/* Lista de Produtos */
-.products {
-    background-color: #fff;
+/* Seção Destaques */
+.destaques {
+    background-color: #222;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.destaques h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .product-item {
     display: inline-block;
-    width: 23%;  /* Ajustado para exibir 4 produtos lado a lado */
+    width: 23%;
     margin-right: 2%;
     text-align: center;
     vertical-align: top;
     box-sizing: border-box;
     padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .product-item img {
@@ -71,7 +80,7 @@ main {
 
 .product-item h2 {
     margin: 10px 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .product-item span {
@@ -81,53 +90,54 @@ main {
 }
 
 .product-item .btn {
-    background-color: #333;
+    background-color: #555;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .product-item .btn:hover {
-    background-color: #555;
+    background-color: #777;
 }
 
-/* Seção de Promoções */
-.promotions {
+.add-image-btn {
+    background-color: #444;
+    font-size: 1em;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 30px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.add-image-btn:hover {
+    background-color: #666;
+}
+
+/* Seção de Produtos */
+.products {
     padding: 20px 0;
-    background-color: #fff;
+    background-color: #222;
 }
 
-.promotions h2 {
+.products h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.promotion-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.promotion-item img {
-    width: 40%;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-.promotion-info h3 {
+.products .product-item {
     margin: 0;
-    font-size: 1.5em;
-}
-
-.promotion-info p {
-    margin: 5px 0 0;
 }
 
 /* Rodapé */
 footer {
-    background-color: #333;
+    background-color: #111;
     color: white;
     padding: 15px 0;
     text-align: center;

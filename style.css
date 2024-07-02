@@ -60,17 +60,21 @@ main {
     margin-bottom: 20px;
 }
 
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .product-item {
-    display: inline-block;
+    position: relative;
     width: 23%;
-    margin-right: 2%;
+    margin-bottom: 20px;
     text-align: center;
-    vertical-align: top;
-    box-sizing: border-box;
-    padding: 10px;
     background-color: #333;
     border-radius: 10px;
-    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .product-item img {
@@ -103,22 +107,42 @@ main {
     background-color: #777;
 }
 
+/* Botão de Adicionar Imagem */
 .add-image-btn {
-    background-color: #444;
+    background-color: #28a745; /* Verde */
+    color: white;
     font-size: 1em;
     width: 30px;
     height: 30px;
     padding: 5px;
     border-radius: 50%;
     line-height: 30px;
-    position: relative;
+    position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
     cursor: pointer;
 }
 
 .add-image-btn:hover {
-    background-color: #666;
+    background-color: #218838; /* Verde Escuro */
+}
+
+/* Botão de Adicionar Produto */
+.add-product-btn {
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+}
+
+.add-product-btn:hover {
+    background-color: #0056b3; /* Azul Escuro */
 }
 
 /* Seção de Produtos */
@@ -132,8 +156,10 @@ main {
     margin-bottom: 20px;
 }
 
-.products .product-item {
-    margin: 0;
+.products .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Rodapé */

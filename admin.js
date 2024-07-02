@@ -26,17 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Adiciona produtos à seção de Destaques e Produtos
-    document.getElementById('add-product-btn-destaques').addEventListener('click', () => {
-        addNewProduct('destaques');
-    });
-
+    // Adiciona produtos à seção de Produtos
     document.getElementById('add-product-btn-products').addEventListener('click', () => {
-        addNewProduct('products');
+        addNewProduct();
     });
 
-    function addNewProduct(type) {
-        const productList = document.getElementById(`${type}-list`);
+    function addNewProduct() {
+        const productList = document.getElementById('products-list');
 
         const newProduct = document.createElement('div');
         newProduct.classList.add('product-item');

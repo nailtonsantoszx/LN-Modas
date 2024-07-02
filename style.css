@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+#admin-toggle {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#carousel {
+    display: flex;
+    overflow: auto;
+    width: 80%;
+}
+
+.product {
+    position: relative;
+    margin: 10px;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.remove-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#add-image {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}

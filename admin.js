@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>${name}</h2>
                     <span>${price}</span>
                     <button class="btn">Comprar</button>
-                    <button class="btn add-image-btn"></button>
+                    <button class="btn add-image-btn">+</button>
                 `;
                 productList.appendChild(newProduct);
 
@@ -82,5 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             alert('Todos os campos devem ser preenchidos!');
         }
+    });
+
+    // Filtros de Categoria
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const filter = event.target.getAttribute('data-filter');
+            const productCategories = document.querySelectorAll('.product-category');
+
+            productCategories.forEach(category => {
+                if (filter === 'all' || category.id === `category-${filter}`) {
+                    category.style.display = 'block';
+                } else {
+                    category.style.display = 'none';
+                }
+            });
+        });
     });
 });

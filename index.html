@@ -28,37 +28,10 @@
         <section class="destaques">
             <div class="container">
                 <h2>Destaques</h2>
-                <div class="product-list">
-                    <div class="product-item">
-                        <img src="produto1.jpg" alt="Camisa Estilosa - Camisa de algodão azul com estampa moderna">
-                        <h2>Camisa Estilosa</h2>
-                        <span>R$ 99,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto2.jpg" alt="Calça Confortável - Calça jeans com ajuste flexível">
-                        <h2>Calça Confortável</h2>
-                        <span>R$ 149,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto3.jpg" alt="Shorts Modernos - Shorts casual para dias quentes">
-                        <h2>Shorts Modernos</h2>
-                        <span>R$ 89,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto4.jpg" alt="Tênis Descolado - Tênis casual com design moderno">
-                        <h2>Tênis Descolado</h2>
-                        <span>R$ 199,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
+                <div class="product-list" id="destaques-list">
+                    <!-- Produtos em Destaque serão injetados aqui pelo JavaScript -->
                 </div>
-                <button class="btn add-product-btn" aria-label="Adicionar um novo produto">Adicionar Produto</button> <!-- Botão para adicionar um novo produto -->
+                <button class="btn add-product-btn" id="add-product-btn">Adicionar Novo Produto</button>
             </div>
         </section>
 
@@ -66,65 +39,10 @@
         <section class="products">
             <div class="container">
                 <h2>Mais Produtos</h2>
-                <div class="product-list">
-                    <div class="product-item">
-                        <img src="produto5.jpg" alt="Jaqueta Casual - Jaqueta leve para clima ameno">
-                        <h2>Jaqueta Casual</h2>
-                        <span>R$ 229,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto6.jpg" alt="Camisa Polo - Camisa polo clássica em várias cores">
-                        <h2>Camisa Polo</h2>
-                        <span>R$ 119,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto7.jpg" alt="Blusa de Frio - Blusa de frio quentinha para inverno">
-                        <h2>Blusa de Frio</h2>
-                        <span>R$ 139,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto8.jpg" alt="Saia Elegante - Saia midi com corte sofisticado">
-                        <h2>Saia Elegante</h2>
-                        <span>R$ 89,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto9.jpg" alt="Vestido Floral - Vestido com estampa floral vibrante">
-                        <h2>Vestido Floral</h2>
-                        <span>R$ 179,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto10.jpg" alt="Blazer Sofisticado - Blazer formal para ocasiões especiais">
-                        <h2>Blazer Sofisticado</h2>
-                        <span>R$ 259,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto11.jpg" alt="Saia Midi - Saia midi com design elegante">
-                        <h2>Saia Midi</h2>
-                        <span>R$ 99,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
-                    <div class="product-item">
-                        <img src="produto12.jpg" alt="Camisa de Manga Longa - Camisa de manga longa em tecido leve">
-                        <h2>Camisa de Manga Longa</h2>
-                        <span>R$ 129,90</span>
-                        <button class="btn">Comprar</button>
-                        <button class="btn add-image-btn" aria-label="Adicionar imagem ao produto">+</button> <!-- Botão para adicionar imagem -->
-                    </div>
+                <div class="product-list" id="products-list">
+                    <!-- Mais Produtos serão injetados aqui pelo JavaScript -->
                 </div>
-                <button class="btn add-product-btn" aria-label="Adicionar um novo produto">Adicionar Produto</button> <!-- Botão para adicionar um novo produto -->
+                <button class="btn add-product-btn" id="add-product-btn-products">Adicionar Novo Produto</button>
             </div>
         </section>
     </main>
@@ -134,9 +52,9 @@
         <div class="container">
             <p>&copy; 2024 LN Modas. Todos os direitos reservados.</p>
             <ul>
-                <li><a href="#" aria-label="Leia a Política de Privacidade">Política de Privacidade</a></li>
-                <li><a href="#" aria-label="Leia os Termos de Serviço">Termos de Serviço</a></li>
-                <li><a href="#" aria-label="Leia as Perguntas Frequentes">FAQ</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Serviço</a></li>
+                <li><a href="#">FAQ</a></li>
             </ul>
         </div>
     </footer>

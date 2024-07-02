@@ -121,10 +121,10 @@ main {
     top: 10px;
     right: 10px;
     cursor: pointer;
-}
-
-.add-image-btn:hover {
-    background-color: #218838; /* Verde Escuro */
+    background-image: url('https://img.icons8.com/ios/50/ffffff/photo-gallery.png'); /* Ícone de Galeria */
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Botão de Adicionar Produto */

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Adiciona o evento de clique para os botões de adicionar imagem
     const addImageButtons = document.querySelectorAll('.add-image-btn');
-    
+
     addImageButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Cria um input do tipo file para selecionar uma nova imagem

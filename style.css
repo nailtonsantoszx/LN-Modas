@@ -48,14 +48,13 @@ main {
     padding: 20px 0;
 }
 
-/* Seção Destaques */
-.destaques {
+/* Seção de Produtos */
+.products {
+    padding: 20px 0;
     background-color: #222;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.destaques h2 {
+.products h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -143,23 +142,6 @@ main {
 
 .add-product-btn:hover {
     background-color: #0056b3; /* Azul Escuro */
-}
-
-/* Seção de Produtos */
-.products {
-    padding: 20px 0;
-    background-color: #222;
-}
-
-.products h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.products .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 /* Rodapé */

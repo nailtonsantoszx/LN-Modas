@@ -59,16 +59,28 @@ main {
     margin-bottom: 20px;
 }
 
+/* Categoria */
+.category {
+    margin-bottom: 40px;
+}
+
+.category h3 {
+    color: #d9534f;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Lista de Produtos */
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 20px;
 }
 
+/* Itens de Produtos */
 .product-item {
     position: relative;
     width: 23%;
-    margin-bottom: 20px;
     text-align: center;
     background-color: #333;
     border-radius: 10px;
@@ -108,40 +120,33 @@ main {
 
 /* Botão de Adicionar Imagem */
 .add-image-btn {
+    background: url('https://img.icons8.com/ios/50/ffffff/photo-gallery.png') no-repeat center;
     background-color: #28a745; /* Verde */
-    color: white;
-    font-size: 1em;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 50%;
-    line-height: 30px;
+    background-size: 20px 20px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 10px;
     right: 10px;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
-    background-image: url('https://img.icons8.com/ios/50/ffffff/photo-gallery.png'); /* Ícone de Galeria */
-    background-size: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-/* Botão de Adicionar Produto */
+/* Botão Adicionar Novo Produto */
 .add-product-btn {
+    display: block;
+    margin: 20px auto;
     background-color: #007bff; /* Azul */
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px auto;
-    display: block;
-    text-align: center;
-    font-size: 1em;
 }
 
 .add-product-btn:hover {
-    background-color: #0056b3; /* Azul Escuro */
+    background-color: #0056b3;
 }
 
 /* Rodapé */

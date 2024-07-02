@@ -13,10 +13,10 @@
             <h1>LN Modas</h1>
             <nav>
                 <ul>
-                    <li><a href="#" aria-label="Ir para a página inicial">Início</a></li>
-                    <li><a href="#" aria-label="Ir para a seção de produtos">Nossos Produtos</a></li>
-                    <li><a href="#" aria-label="Saiba mais sobre nós">Sobre Nós</a></li>
-                    <li><a href="#" aria-label="Entre em contato conosco">Contato</a></li>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,133 +24,78 @@
     
     <!-- Seção Principal -->
     <main>
-        <!-- Seção de Produtos -->
+        <!-- Filtros de Categoria -->
+        <section class="filters">
+            <div class="container">
+                <button class="filter-btn" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="camisas">Camisas</button>
+                <button class="filter-btn" data-filter="calcas">Calças</button>
+                <button class="filter-btn" data-filter="shorts">Shorts</button>
+                <button class="filter-btn" data-filter="tenis">Tênis</button>
+            </div>
+        </section>
+        
+        <!-- Seção Produtos -->
         <section class="products">
             <div class="container">
                 <h2>Nossos Produtos</h2>
 
-                <!-- Categoria Camisas -->
-                <div class="category">
+                <!-- Camisas -->
+                <div class="product-category" id="category-camisas">
                     <h3>Camisas</h3>
-                    <div class="product-list" id="category-shirts">
-                        <div class="product-item">
-                            <img src="produto1.jpg" alt="Camisa Estilosa">
-                            <h2>Camisa Estilosa</h2>
-                            <span>R$ 99,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                        <div class="product-item">
-                            <img src="produto2.jpg" alt="Camisa Polo">
-                            <h2>Camisa Polo</h2>
-                            <span>R$ 119,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                        <div class="product-item">
-                            <img src="produto3.jpg" alt="Camisa de Manga Longa">
-                            <h2>Camisa de Manga Longa</h2>
-                            <span>R$ 129,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
+                    <div class="product-item">
+                        <img src="produto1.jpg" alt="Camisa Polo">
+                        <h2>Camisa Polo</h2>
+                        <span>R$ 119,90</span>
+                        <button class="btn">Comprar</button>
+                        <button class="btn add-image-btn">+</button>
                     </div>
+                    <!-- Adicione mais produtos na categoria Camisas aqui -->
                 </div>
 
-                <!-- Categoria Calças -->
-                <div class="category">
+                <!-- Calças -->
+                <div class="product-category" id="category-calcas">
                     <h3>Calças</h3>
-                    <div class="product-list" id="category-pants">
-                        <div class="product-item">
-                            <img src="produto4.jpg" alt="Calça Confortável">
-                            <h2>Calça Confortável</h2>
-                            <span>R$ 149,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                        <div class="product-item">
-                            <img src="produto5.jpg" alt="Calça Jeans">
-                            <h2>Calça Jeans</h2>
-                            <span>R$ 159,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
+                    <div class="product-item">
+                        <img src="produto2.jpg" alt="Calça Confortável">
+                        <h2>Calça Confortável</h2>
+                        <span>R$ 149,90</span>
+                        <button class="btn">Comprar</button>
+                        <button class="btn add-image-btn">+</button>
                     </div>
+                    <!-- Adicione mais produtos na categoria Calças aqui -->
                 </div>
 
-                <!-- Categoria Shorts -->
-                <div class="category">
+                <!-- Shorts -->
+                <div class="product-category" id="category-shorts">
                     <h3>Shorts</h3>
-                    <div class="product-list" id="category-shorts">
-                        <div class="product-item">
-                            <img src="produto6.jpg" alt="Shorts Modernos">
-                            <h2>Shorts Modernos</h2>
-                            <span>R$ 89,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                        <div class="product-item">
-                            <img src="produto7.jpg" alt="Shorts de Verão">
-                            <h2>Shorts de Verão</h2>
-                            <span>R$ 79,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
+                    <div class="product-item">
+                        <img src="produto3.jpg" alt="Shorts Modernos">
+                        <h2>Shorts Modernos</h2>
+                        <span>R$ 89,90</span>
+                        <button class="btn">Comprar</button>
+                        <button class="btn add-image-btn">+</button>
                     </div>
+                    <!-- Adicione mais produtos na categoria Shorts aqui -->
                 </div>
 
-                <!-- Categoria Tênis -->
-                <div class="category">
+                <!-- Tênis -->
+                <div class="product-category" id="category-tenis">
                     <h3>Tênis</h3>
-                    <div class="product-list" id="category-shoes">
-                        <div class="product-item">
-                            <img src="produto8.jpg" alt="Tênis Descolado">
-                            <h2>Tênis Descolado</h2>
-                            <span>R$ 199,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                        <div class="product-item">
-                            <img src="produto9.jpg" alt="Tênis Casual">
-                            <h2>Tênis Casual</h2>
-                            <span>R$ 179,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
+                    <div class="product-item">
+                        <img src="produto4.jpg" alt="Tênis Descolado">
+                        <h2>Tênis Descolado</h2>
+                        <span>R$ 199,90</span>
+                        <button class="btn">Comprar</button>
+                        <button class="btn add-image-btn">+</button>
                     </div>
+                    <!-- Adicione mais produtos na categoria Tênis aqui -->
                 </div>
-
-                <!-- Categoria Outros -->
-                <div class="category">
-                    <h3>Outros</h3>
-                    <div class="product-list" id="category-others">
-                        <div class="product-item">
-                            <img src="produto10.jpg" alt="Jaqueta Casual">
-                            <h2>Jaqueta Casual</h2>
-                            <span>R$ 229,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                        <div class="product-item">
-                            <img src="produto11.jpg" alt="Saia Elegante">
-                            <h2>Saia Elegante</h2>
-                            <span>R$ 89,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                        <div class="product-item">
-                            <img src="produto12.jpg" alt="Blusa de Frio">
-                            <h2>Blusa de Frio</h2>
-                            <span>R$ 139,90</span>
-                            <button class="btn">Comprar</button>
-                            <button class="btn add-image-btn"></button>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn add-product-btn" id="add-product-btn">Adicionar Novo Produto</button>
             </div>
         </section>
+        
+        <!-- Botão Adicionar Produto -->
+        <button id="add-product-btn" class="add-product-btn">Adicionar Novo Produto</button>
     </main>
     
     <!-- Rodapé -->

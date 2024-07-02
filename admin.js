@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = prompt('Nome do novo produto:');
         const price = prompt('Preço do novo produto (ex.: R$ 99,90):');
         const imgSrc = prompt('URL da imagem do novo produto:');
-        const category = prompt('Categoria do novo produto (Camisas, Calças, Shorts, Tênis, Outros):');
+        const category = prompt('Categoria do novo produto (Camisas, Calças, Shorts, Tênis):');
         
         if (name && price && imgSrc && category) {
             // Formata a categoria para minúsculas e remove espaços

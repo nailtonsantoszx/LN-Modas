@@ -111,7 +111,7 @@ main {
 
 .product-item img {
     width: 100%;
-    max-height: 150px; /* Tamanho da imagem ajustado */
+    max-height: 120px; /* Tamanho da imagem ajustado */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -170,18 +170,27 @@ main {
     margin-top: 20px;
 }
 
+/* Botão Adicionar Produto */
 .add-product .btn {
     background-color: #007bff; /* Azul */
     color: #fff;
     padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .add-product .btn:hover {
     background-color: #0056b3; /* Azul mais escuro */
+}
+
+/* Estilo Admin Only */
+.admin-only {
+    display: none;
+}
+
+/* Exibindo Elementos Administrativos para o Admin */
+body.admin .admin-only {
+    display: block;
 }
 
 /* Rodapé */

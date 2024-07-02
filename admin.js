@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let index = 0;
 
     const showItem = (index) => {
-        const offset = -index * 100;
+        const offset = -index * 25;  // Ajustado para mostrar 4 itens no carrossel
         carouselContainer.style.transform = `translateX(${offset}%)`;
     };
 

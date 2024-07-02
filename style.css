@@ -47,59 +47,50 @@ main {
     padding: 20px 0;
 }
 
-/* Carrossel de Produtos */
-.carousel {
-    position: relative;
+/* Lista de Produtos */
+.products {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-container {
-    display: flex;
-    overflow: hidden;
-}
-
-.carousel-item {
-    min-width: 25%;
-    box-sizing: border-box;
+.product-item {
+    display: inline-block;
+    width: 23%;  /* Ajustado para exibir 4 produtos lado a lado */
+    margin-right: 2%;
     text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
     padding: 10px;
 }
 
-.carousel-item img {
+.product-item img {
     width: 100%;
     border-radius: 10px;
 }
 
-.carousel-item p {
-    margin: 10px 0 5px;
-    font-weight: bold;
+.product-item h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
 }
 
-.carousel-item span {
+.product-item span {
     color: #d9534f;
     display: block;
     margin-bottom: 10px;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
+.product-item .btn {
+    background-color: #333;
     color: white;
-    font-size: 2em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+.product-item .btn:hover {
+    background-color: #555;
 }
 
 /* Seção de Promoções */

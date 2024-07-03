@@ -105,27 +105,27 @@ $is_admin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
                     </div>
                     <!-- Adicione mais produtos de Tênis aqui -->
                 </div>
+
+                <?php if ($is_admin): ?>
+                <div class="add-product admin-only">
+                    <button class="btn">Adicionar Novo Produto</button>
+                </div>
+                <?php endif; ?>
             </div>
         </section>
-
-        <!-- Botão Adicionar Produto -->
-        <div class="add-product admin-only">
-            <button id="add-product-btn" class="btn">Adicionar Produto</button>
-        </div>
     </main>
-    
+
     <!-- Rodapé -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 LN Modas. Todos os direitos reservados.</p>
             <ul>
                 <li><a href="#">Política de Privacidade</a></li>
                 <li><a href="#">Termos de Serviço</a></li>
-                <li><a href="#">FAQ</a></li>
             </ul>
         </div>
     </footer>
 
     <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

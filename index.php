@@ -1,131 +1,75 @@
-<?php
-session_start();
-$is_admin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
-?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LN Modas - Venda de Roupas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>LN Modas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-<body class="<?php echo $is_admin ? 'admin' : ''; ?>">
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container">
-            <h1>LN Modas</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <?php if ($is_admin): ?>
-                        <li><a href="admin.php">Admin</a></li>
-                        <li><a href="logout.php">Sair</a></li>
-                    <?php endif; ?>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body>
+    <?php include 'includes/header.php'; ?>
     
-    <!-- Seção Principal -->
     <main>
-        <!-- Filtros de Categoria -->
-        <div class="filters">
-            <button class="filter-btn" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="camisas">Camisas</button>
-            <button class="filter-btn" data-filter="calcas">Calças</button>
-            <button class="filter-btn" data-filter="shorts">Shorts</button>
-            <button class="filter-btn" data-filter="tenis">Tênis</button>
-        </div>
-
-        <!-- Seção Produtos -->
+        <section class="hero">
+            <div class="hero-text">
+                <img id="logo-hero" src="images/logo.png" alt="LN Modas">
+                <p>Explore nosso universo de tendências, a moda define quem você é!</p>
+            </div>
+        </section>
+        
+        <section class="categories">
+            <h2>Categorias</h2>
+            <div class="category-buttons">
+                <a href="index.php?category=all" class="button">Todos</a>
+                <a href="index.php?category=camisas" class="button">Camisas</a>
+                <a href="index.php?category=calcas" class="button">Calças</a>
+                <a href="index.php?category=shorts" class="button">Shorts</a>
+                <a href="index.php?category=tenis" class="button">Tênis</a>
+                <a href="index.php?category=bone" class="button">Bonés</a>
+            </div>
+        </section>
+        
         <section class="products">
-            <div class="container">
-                <h2>Nossos Produtos</h2>
+            <h2>Nossos produtos</h2>
+            <div class="product-list">
+                <?php
+                // Array de produtos com categorias, imagens e informações
+                $products = [
+                    ["nome" => "Camisa do Corinthians 2015", "preco" => "R$ 149,99", "imagem" => "camisa-corinthians-2015.jpg", "categoria" => "camisas"],
+                    ["nome" => "Camisa do Barcelona 2009 Messi", "preco" => "R$ 299,99", "imagem" => "camisa-barcelona-2009-messi.jpg", "categoria" => "camisas"],
+                    ["nome" => "Camisa Polo Lacoste Verde", "preco" => "R$ 189,99", "imagem" => "camisa-polo-lacoste-verde.jpg", "categoria" => "camisas"],
+                    ["nome" => "Camisa Corinthians 2024 Preta", "preco" => "R$ 159,99", "imagem" => "camisa-corinthians-2024-preta.jpg", "categoria" => "camisas"],
+                    ["nome" => "Boné Lacoste Branco", "preco" => "R$ 99,99", "imagem" => "bone-lacoste-branco.jpg", "categoria" => "bone"],
+                    ["nome" => "Boné Lacoste Preto", "preco" => "R$ 99,99", "imagem" => "bone-lacoste-preto.jpg", "categoria" => "bone"],
+                    ["nome" => "Boné Lacoste Vermelho", "preco" => "R$ 99,99", "imagem" => "bone-lacoste-vermelho.jpg", "categoria" => "bone"],
+                    ["nome" => "Calça Corinthians", "preco" => "R$ 249,99", "imagem" => "calca-corinthians.jpg", "categoria" => "calcas"],
+                    ["nome" => "Calça Nike", "preco" => "R$ 229,99", "imagem" => "calca-nike.jpg", "categoria" => "calcas"],
+                    ["nome" => "Short Nike", "preco" => "R$ 139,99", "imagem" => "short-nike.jpg", "categoria" => "shorts"],
+                    ["nome" => "Camisa do Flamengo 2024", "preco" => "R$ 179,99", "imagem" => "camisa-flamengo-2024.jpg", "categoria" => "camisas"],
+                    ["nome" => "Boné Adidas Preto", "preco" => "R$ 89,99", "imagem" => "bone-adidas-preto.jpg", "categoria" => "bone"],
+                    ["nome" => "Tênis Puma", "preco" => "R$ 299,99", "imagem" => "tenis-puma.jpg", "categoria" => "tenis"],
+                ];
 
-                <!-- Categoria Camisas -->
-                <div id="category-camisas" class="product-category">
-                    <h3>Camisas</h3>
-                    <div class="product-item">
-                        <img src="images/produto1.jpg" alt="Camisa Polo">
-                        <h2>Camisa Polo</h2>
-                        <span>R$ 119,90</span>
-                        <button class="btn">Comprar</button>
-                        <?php if ($is_admin): ?>
-                        <button class="btn add-image-btn admin-only">+</button> <!-- Botão Adicionar Imagem -->
-                        <?php endif; ?>
-                    </div>
-                    <!-- Adicione mais produtos de Camisa aqui -->
-                </div>
+                // Filtrando os produtos pela categoria selecionada
+                $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'all';
 
-                <!-- Categoria Calças -->
-                <div id="category-calcas" class="product-category">
-                    <h3>Calças</h3>
-                    <div class="product-item">
-                        <img src="images/produto2.jpg" alt="Calça Jeans">
-                        <h2>Calça Jeans</h2>
-                        <span>R$ 149,90</span>
-                        <button class="btn">Comprar</button>
-                        <?php if ($is_admin): ?>
-                        <button class="btn add-image-btn admin-only">+</button> <!-- Botão Adicionar Imagem -->
-                        <?php endif; ?>
-                    </div>
-                    <!-- Adicione mais produtos de Calça aqui -->
-                </div>
-
-                <!-- Categoria Shorts -->
-                <div id="category-shorts" class="product-category">
-                    <h3>Shorts</h3>
-                    <div class="product-item">
-                        <img src="images/produto3.jpg" alt="Shorts Casual">
-                        <h2>Shorts Casual</h2>
-                        <span>R$ 89,90</span>
-                        <button class="btn">Comprar</button>
-                        <?php if ($is_admin): ?>
-                        <button class="btn add-image-btn admin-only">+</button> <!-- Botão Adicionar Imagem -->
-                        <?php endif; ?>
-                    </div>
-                    <!-- Adicione mais produtos de Shorts aqui -->
-                </div>
-
-                <!-- Categoria Tênis -->
-                <div id="category-tenis" class="product-category">
-                    <h3>Tênis</h3>
-                    <div class="product-item">
-                        <img src="images/produto4.jpg" alt="Tênis Esportivo">
-                        <h2>Tênis Esportivo</h2>
-                        <span>R$ 179,90</span>
-                        <button class="btn">Comprar</button>
-                        <?php if ($is_admin): ?>
-                        <button class="btn add-image-btn admin-only">+</button> <!-- Botão Adicionar Imagem -->
-                        <?php endif; ?>
-                    </div>
-                    <!-- Adicione mais produtos de Tênis aqui -->
-                </div>
-
-                <?php if ($is_admin): ?>
-                <div class="add-product admin-only">
-                    <button class="btn">Adicionar Novo Produto</button>
-                </div>
-                <?php endif; ?>
+                foreach ($products as $product) {
+                    if ($selectedCategory == 'all' || $selectedCategory == $product['categoria']) {
+                        echo "
+                        <div class='product'>
+                            <img src='images/{$product['imagem']}' alt='{$product['nome']}'>
+                            <h3>{$product['nome']}</h3>
+                            <p class='price'>{$product['preco']}</p>
+                            <a href='checkout.php?id={$product['nome']}' class='button'>Comprar</a>
+                        </div>";
+                    }
+                }
+                ?>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <ul>
-                <li><a href="#">Política de Privacidade</a></li>
-                <li><a href="#">Termos de Serviço</a></li>
-            </ul>
-        </div>
-    </footer>
-
-    <script src="js/admin.js"></script>
-    <script src="js/main.js"></script>
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>
